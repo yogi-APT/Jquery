@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="email" placeholder="enter the mail">
+
+    <script>
+        let inp = document.querySelector('input');
+        inp.addEventListener('keyup', (event) => {
+            if (event.key.charCodeAt(0) == 69) {
+                let l = /^[a-z]{1,}[@]{1,1}[a-z]{1,}[.]{1,1}[a-z]{1,}$/
+                inp.style.border = l.test(inp.value) ? '5px solid green' : '5px solid red'
+            }
+        })
+
+
+    </script>
+   
+</body>
+
+</html>
