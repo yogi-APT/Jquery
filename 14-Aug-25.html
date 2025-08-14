@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Student {
+        //     #roll = "WBC001" //Private 
+        //     getInfo() {
+        //         this._Name = "Kumaran";// Protected 
+        //         this.Age = 25;// Public
+
+        //     }
+        // }
+        // class Mark extends Student {
+        //     getMark() {
+        //         this.score = [1, 2, 3, 4, 5];
+        //     }
+        // }
+        // class Result extends Mark {
+        //     showReport() {
+        //         let sum = 0;
+        //         document.write(`${this._Name}<br/>${this.Age}<br/>${this.score}<br/>`);
+        //         for (let x of this.score) {
+        //             sum += x;
+        //         }
+        //         document.write(sum);
+        //     }
+        // }
+        // let R = new Result();
+        // R.getInfo();
+        // R.getMark();
+        // R.showReport();
+        //Function Overloading 
+        // class Calculator {
+        //     add(a, b, c) {
+        //         if (a != undefined && b != undefined && c != undefined) {
+        //             document.write(a + b + c);
+        //         }
+        //         else if (a != undefined && b != undefined) {
+        //             document.write(a + b);
+        //         }
+        //         else {
+        //             document.writeln(a);
+        //         }
+        //     }
+
+        // }
+        // let obj = new Calculator();
+        // obj.add(10, 20);
+        // obj.add(45, 20, 40);
+        // obj.add(56);
+
+        //function overriding 
+        class Cal {
+            add(a, b) {
+                document.writeln((a + b) + "<br/>");
+            }
+        }
+        class Cal1 extends Cal {
+            add(a, b) {
+                document.writeln((a - b) + "<br/>");
+                super.add(a, b);
+            }
+        }
+        class Cal2 extends Cal1 {
+            add(a, b) {
+
+                document.writeln((a * b) + "<br/>");
+                super.add(a, b);
+            }
+        }
+        class Cal3 extends Cal2 {
+            add(a, b) {
+
+                document.writeln((a / b) + "<br/>");
+                super.add(a, b);
+            }
+        }
+
+        let obj = new Cal3();
+        obj.add(10, 2);
+
+    </script>
+</body>
+
+</html>

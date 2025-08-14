@@ -1,0 +1,37 @@
+1.Inheritance is used to access the data member & member function from parent to child class
+[Extends,super()]
+2.Polymorphism - Many Forms 
+	2.1 Function Overloading
+	2.2 Function Overriding 
+3.Encapsulation
+	Access Specifier 	
+	Private by #
+	Protected by _
+	Public  
+4.Abstraction - only the required information is viewed for the user 
+
+
+Grouping  Scripts
+Grouping scripts refers to organizing and managing JavaScript code into modular, maintainable chunks rather than one large file. 
+This can involve:
+Splitting code across multiple files (modules)
+Importing/exporting (using ES6 modules)
+Bundling files (with tools like Webpack, Rollup, Vite)
+Module Import & Export concept 
+
+Non-Blocking Scripts
+By default, adding <script> tags in HTML can 
+block the page from rendering until the script loads and executes.
+
+Solutions to Avoid Blocking
+
+a. defer (Recommended for most scripts)
+<script src="main.js" defer></script>
+Loads the script in parallel while the HTML continues parsing.
+Executes after the document is parsed, in order of appearance.
+
+b. async
+<script src="analytics.js" async></script>
+Loads and executes the script as soon as it's downloaded, possibly before the HTML is 
+fully parsed.Execution order is not guaranteed.
+
