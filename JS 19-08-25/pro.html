@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Promise-->
+    <script>
+        let store = new Promise((yes, no) => {
+            a = parseInt(prompt("Enter the Number:"))
+            if (a > 0) {
+                yes("It is a Positive Number" + a);
+            }
+            else {
+                no("It is not a Positive Number");
+            }
+        })
+        store.then((res) => {
+            document.writeln(res)
+        }).catch((res) => {
+            console.log(res);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Promise-->
+    <script>
+         const store = new Promise((resolve, reject) => {
+      const a = parseInt(prompt("Enter the Number:"));
+
+      if (isNaN(a)) {
+        reject("Invalid input! Please enter a valid number.");
+      } else {
+        resolve(a);
+      }
+    });
+
+    store
+      .then((num) => {
+        if (num > 0) {
+          return `It is a Positive Number: ${num}`;
+        } else if (num === 0) {
+          return `It is Zero: ${num}`;
+        } else {
+    
+          throw `It is a Negative Number: ${num}`;
+        }
+      })
+      .then((message) => {
+        
+        document.writeln(message);
+      })
+      .catch((error) => {
+        document.writeln(error);
+      });
+    </script>
+</body>
+
+</html>
