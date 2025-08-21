@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 125px;
+            height: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let server = "https://api.thecatapi.com/v1/images/search?limit=10";
+        fetch(server).then(y => y.json()).then(x => {
+       
+            for (let pic of x) {
+                let pix = document.createElement('img');
+                pix.src = pic.url;
+                document.querySelector('body').appendChild(pix);
+              
+            }
+        })
+    </script>
+</body>
+
+</html>
